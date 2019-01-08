@@ -20,7 +20,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_appointment_history" />
+    <include layout="@layout/content_history" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

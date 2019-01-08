@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_login) {
 
-            Intent i = new Intent(getApplicationContext(), SignupActivity.class);
+            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(i);
 
         }
