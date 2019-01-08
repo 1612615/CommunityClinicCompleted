@@ -50,6 +50,7 @@
         android:onClick="appoinmentHistory"
         android:text="History"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonReminder" />
 </android.support.constraint.ConstraintLayout>
