@@ -1,6 +1,5 @@
 package com.google.communityclinic;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,12 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    public int loginStatus = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,10 +82,7 @@ public class MainActivity extends AppCompatActivity
             // Handle the home action
         } else if (id == R.id.nav_info) {
 
-        } else if (id == R.id.nav_login) {
-
-            Intent i = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(i);
+        } else if (id == R.id.nav_logout) {
 
         }
 
