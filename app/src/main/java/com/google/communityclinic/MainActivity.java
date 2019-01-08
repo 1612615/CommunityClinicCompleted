@@ -1,5 +1,6 @@
 package com.google.communityclinic;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -82,7 +83,10 @@ public class MainActivity extends AppCompatActivity
             // Handle the home action
         } else if (id == R.id.nav_info) {
 
-        } else if (id == R.id.nav_logout) {
+        } else if (id == R.id.nav_login) {
+
+            Intent i = new Intent(getApplicationContext(), SignupActivity.class);
+            startActivity(i);
 
         }
 
