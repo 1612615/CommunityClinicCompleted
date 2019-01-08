@@ -7,15 +7,15 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home_gray_24dp"
-            android:title="Home" />
+            android:title="@string/home" />
         <item
             android:id="@+id/nav_info"
             android:icon="@drawable/ic_info_gray_24dp"
-            android:title="App Info" />
+            android:title="@string/app_info" />
         <item
-            android:id="@+id/nav_logout"
+            android:id="@+id/nav_login"
             android:icon="@drawable/ic_lock_grey_24dp"
-            android:title="Logout" />
+            android:title="@string/login2" />
     </group>
 
 </menu>
