@@ -6,4 +6,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_appointment">Appointment</string>
+    <string name="title_activity_new_appointment">Make a New Appointment</string>
+    <string name="title_activity_appointment_history">Appointment History</string>
+    <string name="title_activity_remainder">Appointment Remainder</string>
 </resources>
