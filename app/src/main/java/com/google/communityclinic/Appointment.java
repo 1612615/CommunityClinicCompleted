@@ -28,16 +28,16 @@ public class Appointment extends AppCompatActivity {
 
     }
     public void makeNewAppointment (View view) {
-        Intent intent = new Intent(this, NewAppointment.class);
+        Intent intent = new Intent(getApplicationContext(), NewAppointment.class);
         startActivity(intent);
     }
 
     public void appointmentRemainder (View view) {
-        Intent intent = new Intent(this, Remainder.class);
+        Intent intent = new Intent(this, Reminder.class);
         startActivity(intent);
     }
 
-    public void appoinmentHistory (View view) {
+    public void appointmentHistory(View view) {
         Intent intent = new Intent(this, History.class);
         startActivity(intent);
     }
