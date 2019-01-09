@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -84,14 +85,19 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_info) {
 
         } else if (id == R.id.nav_login) {
-
-            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-            startActivity(i);
+//
+//            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+//            startActivity(i);
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void appointment (View view) {
+        Intent intent = new Intent(this, Appointment.class);
+        startActivity(intent);
     }
 }

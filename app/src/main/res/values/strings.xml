@@ -13,4 +13,8 @@
     <string name="home">Home</string>
     <string name="app_info">App Info</string>
     <string name="login2">Login</string>
+    <string name="history">History</string>
+    <string name="reminder">Appointment Reminder</string>
+    <string name="new_appointment">Make a New Appointment</string>
+    <string name="appointment">Appointment</string>
 </resources>
