@@ -21,7 +21,7 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
-    private static final String URL_FOR_LOGIN = "https://XXX.XXX.X.XX/android_login_example/login.php";
+    private static final String URL_FOR_LOGIN = "https://community-clinic.000webhostapp.com/retrieve_user.php";
     ProgressDialog progressDialog;
     private EditText loginPhoneNumber;
     private Button btnlogin;
@@ -72,14 +72,15 @@ public class LoginActivity extends AppCompatActivity {
                     boolean error = jObj.getBoolean("error");
 
                     if (!error) {
-                        String user = jObj.getJSONObject("user").getString("name");
+                        String user = jObj.getJSONObject("user_accounts").getString("phone_number");
                         // Launch User activity
                         Intent intent = new Intent(
                                 LoginActivity.this,
                                 MainActivity.class);
                         intent.putExtra("username", user);
                         startActivity(intent);
-                        finish();
+
+
                     } else {
 
                         String errorMsg = jObj.getString("error_msg");
