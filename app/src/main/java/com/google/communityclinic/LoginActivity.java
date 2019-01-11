@@ -38,13 +38,6 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
 
-        btnlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loginUser(loginPhoneNumber.getText().toString());
-            }
-        });
-
         btnLinkSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +47,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void login(View view){
+        Toast.makeText(getApplicationContext(), "Successfully Login!", Toast.LENGTH_LONG).show();
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+
+    }
+
 
     private void loginUser( final String phoneNumber) {
         // Tag used to cancel the request

@@ -1,6 +1,7 @@
 package com.google.communityclinic;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -85,9 +86,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_info) {
 
         } else if (id == R.id.nav_login) {
-//
-//            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-//            startActivity(i);
+
+           Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(i);
 
         }
 
@@ -99,5 +100,25 @@ public class MainActivity extends AppCompatActivity
     public void appointment (View view) {
         Intent intent = new Intent(this, Appointment.class);
         startActivity(intent);
+    }
+    public void aboutUs(View view) {
+        Intent intent4 = new Intent(this, AboutUsActivity.class);
+        startActivity(intent4);
+    }
+
+    public void locateUs(View view){
+        Uri gmmIntentUri = Uri.parse("geo:0,0?q=satu malaysia klinik");
+        Intent intent2 = new Intent(Intent.ACTION_VIEW,gmmIntentUri);
+        startActivity(intent2);
+    }
+
+    public void reportUs(View view){
+        Intent intent3 = new Intent(getApplicationContext(),ReportUsActivity.class);
+        startActivity(intent3);
+    }
+
+    public void signup(View view){
+        Intent register = new Intent(getApplicationContext(),SignupActivity.class);
+        startActivity(register);
     }
 }

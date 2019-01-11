@@ -3,6 +3,7 @@
     package="com.google.communityclinic">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -49,6 +50,28 @@
         <activity
             android:name=".History"
             android:label="@string/history" >
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/login">
+    </activity>
+
+        <activity
+            android:name=".SignupActivity"
+            android:label="@string/register_now">
+
+        </activity>
+
+        <activity
+            android:name=".AboutUsActivity"
+            android:label="@string/about_us">
+
+        </activity>
+        <activity
+            android:name=".ReportUsActivity"
+            android:label="@string/report_us">
+
         </activity>
 
     </application>

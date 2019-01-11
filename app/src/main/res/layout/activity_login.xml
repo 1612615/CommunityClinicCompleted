@@ -49,6 +49,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@color/colorPrimaryDark"
+        android:onClick="login"
         android:text="@string/login"
         android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,17 +1,14 @@
 package com.google.communityclinic;
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -21,35 +18,30 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
+public class ReportUsActivity extends AppCompatActivity {
 
-public class SignupActivity extends AppCompatActivity {
-
-    //private Button btnSignUp;
-
-    EditText editTextRegister;
-
+    EditText editTextFeedback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_report_us);
 
-        editTextRegister= (EditText) findViewById(R.id.editTextRegister);
-
-       // btnSignUp = (Button) findViewById(R.id.button);
+        editTextFeedback = (EditText) findViewById(R.id.editTextFeedback);
     }
 
-    public void saveUser(View v) {
+    public void saveFeedback(View v) {
 
-        Phone phonenumber = new Phone();
+        Feedback feedback = new Feedback();
 
-        phonenumber.setPhone(editTextRegister.getText().toString());
+        feedback.setFeedback(editTextFeedback.getText().toString());
 
         try {
 
-            makeServiceCall(this,"https://community-clinic.000webhostapp.com/insert_data.php",phonenumber);
+            makeServiceCall(this,"https://community-clinic.000webhostapp.com/feedbacks.php",feedback );
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -58,7 +50,7 @@ public class SignupActivity extends AppCompatActivity {
     }
 
 
-    public void makeServiceCall(Context context, String url, final Phone phonenumber) {
+    public void makeServiceCall(Context context, String url, final Feedback feedback) {
         //mPostCommentResponse.requestStarted();
         RequestQueue queue = Volley.newRequestQueue(context);
 
@@ -92,13 +84,13 @@ public class SignupActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Error. " + error.toString(), Toast.LENGTH_LONG).show();
                         }
                     })
-            {
+ {
 
-                // postRequest.setRetryPolicy(new DefaultRetryPolicy(10000, 1, 1.0f));
+           // postRequest.setRetryPolicy(new DefaultRetryPolicy(10000, 1, 1.0f));
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<>();
-                    params.put("phonenumber",phonenumber.getPhone());
+                    params.put("feedback", feedback.getFeedback());
                     return params;
                 }
 
@@ -114,5 +106,6 @@ public class SignupActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 
 }

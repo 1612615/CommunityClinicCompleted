@@ -17,4 +17,6 @@
     <string name="reminder">Appointment Reminder</string>
     <string name="new_appointment">Make a New Appointment</string>
     <string name="appointment">Appointment</string>
+    <string name="about_us">About Us</string>
+    <string name="report_us">Report Us</string>
 </resources>
